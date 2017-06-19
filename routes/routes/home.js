@@ -3,7 +3,7 @@ import Home from '../../components/home.jsx';
 import { setTitle } from '../../actions/metaActions'
 
 const route = {
-        path: '/home/',
+        path: '/',
         exact: false,
         component: Home,
         loadData: (ctx, context, Store)=>{

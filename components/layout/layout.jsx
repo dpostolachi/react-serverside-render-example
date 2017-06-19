@@ -16,9 +16,10 @@ export default class Layout extends Component {
                 <body>
                     { this.props.children }
                     <script id="preloadedState" type="text/javascript" dangerouslySetInnerHTML ={ { __html: 'window.__PRELOADED_STATE__ = ' + serialize(preloadedState.getState() ,{isJSON: true}) } } />
+                    <script type="text/javscript" src="/public/scripts/bundle.js"/>
                 </body>
             </html>
         )
     }
-    
+
 }

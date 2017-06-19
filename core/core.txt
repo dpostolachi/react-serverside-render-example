@@ -1,1 +1,0 @@
-Koa extensions like koa-static, body-parser goes here.
