@@ -8,6 +8,6 @@ NPM Scripts:
   
   prod - for running server in production.
   
-  buid - build client script for production.
+  buid - builds client script for production.
   
   watch - runs webpack watch in development. 
