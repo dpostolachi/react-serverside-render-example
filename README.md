@@ -3,7 +3,11 @@ This is an example of React Server Side Rendering with Koa as Server, Redux and 
 
 
 NPM Scripts:
+
   web - for running server.
+  
   prod - for running server in production.
+  
   buid - build client script for production.
+  
   watch - runs webpack watch in development. 
