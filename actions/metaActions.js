@@ -3,7 +3,7 @@ export function setTitle(title){
         return new Promise((resolve) =>{
             setTimeout(()=>{
                 resolve(dispatch({type: "PUSH_PAGE_TITLE", payload: title}))
-            } ,3000)
+            } ,0)
         })
     }
 }

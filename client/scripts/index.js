@@ -24,4 +24,5 @@ const Store = createStore(reducer, preloadedState, middleware)
 
 import AppRouter from '../../routes/app-router.js';
 
+
 render(<BrowserRouter><AppRouter Store={ Store } /></BrowserRouter>, document);
