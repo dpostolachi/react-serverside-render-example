@@ -9,6 +9,7 @@ import { connect } from 'react-redux'
 })
 
 export default class Head extends Component {
+
     render(){
 
         const { title } = this.props.meta
@@ -22,4 +23,5 @@ export default class Head extends Component {
             </head>
         )
     }
+
 }

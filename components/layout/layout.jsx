@@ -5,6 +5,7 @@ import Head from '../controls/head.jsx'
 import serialize from 'serialize-javascript'
 
 export default class Layout extends Component {
+
     render(){
 
         const { preloadedState } = this.props
@@ -19,4 +20,5 @@ export default class Layout extends Component {
             </html>
         )
     }
+    
 }
