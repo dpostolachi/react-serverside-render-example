@@ -1,0 +1,32 @@
+{
+  "name": "probe",
+  "version": "0.0.1",
+  "description": "Simple react server side rendering",
+  "main": "index.js",
+  "scripts": {
+    "web": "node index.js"
+  },
+  "author": "voodoo-child",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.25.0",
+    "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "koa": "^2.2.0",
+    "koa-router": "^7.2.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "redux": "^3.7.0",
+    "redux-promise-middleware": "^4.3.0",
+    "redux-thunk": "^2.2.0",
+    "serialize-javascript": "^1.3.0"
+  }
+}
