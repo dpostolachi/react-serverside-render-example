@@ -36273,15 +36273,15 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _home = __webpack_require__(567);
+var _home = __webpack_require__(585);
 
 var _home2 = _interopRequireDefault(_home);
 
-var _other = __webpack_require__(570);
+var _other = __webpack_require__(586);
 
 var _other2 = _interopRequireDefault(_other);
 
-var _ = __webpack_require__(572);
+var _ = __webpack_require__(587);
 
 var _2 = _interopRequireDefault(_);
 
@@ -36292,36 +36292,7 @@ var routes = [_other2.default, _home2.default, _2.default];
 exports.default = routes;
 
 /***/ }),
-/* 567 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-        value: true
-});
-
-var _home = __webpack_require__(568);
-
-var _home2 = _interopRequireDefault(_home);
-
-var _metaActions = __webpack_require__(569);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var route = {
-        path: '/',
-        exact: true,
-        component: _home2.default,
-        loadData: function loadData(ctx, context, Store) {
-                return (0, _metaActions.setTitle)('This title was pushed from reducer')(Store.dispatch); // Promises that must be fulfilled before render starts
-        }
-};
-
-exports.default = route;
-
-/***/ }),
+/* 567 */,
 /* 568 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36406,34 +36377,7 @@ function setTitle(title) {
 }
 
 /***/ }),
-/* 570 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-        value: true
-});
-
-var _other = __webpack_require__(571);
-
-var _other2 = _interopRequireDefault(_other);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var route = {
-        path: '/other',
-        exact: false,
-        component: _other2.default,
-        loadData: function loadData(ctx, context, Store) {
-                return;
-        }
-};
-
-exports.default = route;
-
-/***/ }),
+/* 570 */,
 /* 571 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36497,38 +36441,7 @@ var Home = function (_Component) {
 exports.default = Home;
 
 /***/ }),
-/* 572 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-        value: true
-});
-
-var _error = __webpack_require__(223);
-
-var _error2 = _interopRequireDefault(_error);
-
-var _extraActions = __webpack_require__(224);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//this route will work if not any other route has been matched
-
-var route = {
-        path: '*',
-        exact: false,
-        component: _error2.default,
-        loadData: function loadData(ctx, context, Store) {
-                return (0, _extraActions.push404)()(Store.dispatch);
-        }
-};
-
-exports.default = route;
-
-/***/ }),
+/* 572 */,
 /* 573 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37529,6 +37442,100 @@ if (typeof Object.create === 'function') {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 581 */,
+/* 582 */,
+/* 583 */,
+/* 584 */,
+/* 585 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+        value: true
+});
+
+var _home = __webpack_require__(568);
+
+var _home2 = _interopRequireDefault(_home);
+
+var _metaActions = __webpack_require__(569);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var route = {
+        path: '/',
+        exact: true,
+        component: _home2.default,
+        loadData: function loadData(ctx, context, Store) {
+                return (0, _metaActions.setTitle)('This title was pushed from reducer')(Store.dispatch); // Promises that must be fulfilled before render starts
+        }
+};
+
+exports.default = route;
+
+/***/ }),
+/* 586 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+        value: true
+});
+
+var _other = __webpack_require__(571);
+
+var _other2 = _interopRequireDefault(_other);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var route = {
+        path: '/other',
+        exact: false,
+        component: _other2.default,
+        loadData: function loadData(ctx, context, Store) {
+                return;
+        }
+};
+
+exports.default = route;
+
+/***/ }),
+/* 587 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+        value: true
+});
+
+var _error = __webpack_require__(223);
+
+var _error2 = _interopRequireDefault(_error);
+
+var _extraActions = __webpack_require__(224);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//this route will work if not any other route has been matched
+
+var route = {
+        path: '*',
+        exact: false,
+        component: _error2.default,
+        loadData: function loadData(ctx, context, Store) {
+                return (0, _extraActions.push404)()(Store.dispatch);
+        }
+};
+
+exports.default = route;
 
 /***/ })
 /******/ ]);
