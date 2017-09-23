@@ -58,7 +58,13 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     fallback: {loader: 'style-loader'},
                     use: [
-                        'css-loader',
+                        {
+                            loader: 'css-loader',
+                            query: {
+                                localIdentName: '[hash:8]',
+                                modules: true
+                            }
+                        },
                         {
                             loader: 'stylus-loader',
                             options: {

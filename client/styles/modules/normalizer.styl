@@ -7,5 +7,14 @@
         font-family: sans-serif
     html
         font-size: 62.5%
+    :link:focus
+    :visited:focus
+        outline: none;
+        color: inherit;
+    :link:focus
+        text-decoration: underline
     a
         text-decoration none
+        &:-moz-focusring
+            text-decoration underline
+            outline 0

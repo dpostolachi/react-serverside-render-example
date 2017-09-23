@@ -8,14 +8,27 @@ body {
 html {
   font-size: 62.5%;
 }
+:link:focus,
+:visited:focus {
+  outline: none;
+  color: inherit;
+}
+:link:focus {
+  text-decoration: underline;
+}
 a {
   text-decoration: none;
+}
+a:-moz-focusring {
+  text-decoration: underline;
+  outline: 0;
 }
 header {
   padding: 0px 12px;
   line-height: 64px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.26);
   background: #fff;
+  margin-bottom: 68px;
 }
 header nav a {
   display: inline-block;
@@ -25,6 +38,14 @@ header nav a {
 header nav a:hover,
 header nav a:focus {
   color: #212121;
+}
+._03c96261 {
+  display: block;
+  margin: 0px auto 12px;
+  width: 1200px;
+  max-width: 100%;
+  position: relative;
+  padding: 12px;
 }
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
