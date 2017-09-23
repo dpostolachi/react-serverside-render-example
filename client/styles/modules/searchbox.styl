@@ -1,0 +1,39 @@
+.searchBox
+    display block
+    width 100%
+    &List
+        list-style: none
+        margin 0
+        padding 0
+    form
+        display: flex
+        line-height: 48px
+        flex-direction: row
+        flex-wrap: nowrap
+        input[type="text"]
+            display inline-block
+            vertical-align: top
+            width calc(100% - 48px)
+            font-size 1.2em
+            border-top 1px solid #BDBDBD
+            border-left 1px solid #BDBDBD
+            border-bottom 1px solid #BDBDBD
+            border-right none
+            padding 0px 12px
+            &:focus
+                border-color#212121
+        button
+            display inline-block
+            vertical-align: top
+            width 48px
+            height 48px
+            text-align: center
+            border none
+            color #fff
+            background $mainColor
+            span
+                font-size 1.6em
+                color #fff
+            &:hover
+            &:focus
+                background lighten($mainColor, 10%)

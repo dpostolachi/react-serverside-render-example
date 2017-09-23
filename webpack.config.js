@@ -20,7 +20,7 @@ console.log("Running Webpack: " + Env)
 
 const PATHS = {
         input: path.join(__dirname, '/client/scripts/index.js'),
-        output: path.join(__dirname, '/public/scripts'),
+        output: path.join(__dirname, '/public/bundle'),
 }
 
 const plugins = [
@@ -30,7 +30,7 @@ const plugins = [
       },
     }),
 
-    new ExtractTextPlugin( '../style/style.css' ),
+    new ExtractTextPlugin( 'style.css' ),
 ]
 
 if ( Env == 'production' )

@@ -44,7 +44,7 @@ class Layout extends Component {
                         { (is404) ? <Error404/> : this.props.children }
                     </HHContainer>
                     <script id="preloadedState" type="text/javascript" dangerouslySetInnerHTML ={ { __html: 'window.__PRELOADED_STATE__ = ' + serialize(preloadedState.getState() ,{isJSON: true}) } } />
-                    <script type="text/javascript" src="/public/scripts/bundle.js" async/>
+                    <script type="text/javascript" src="/public/bundle/bundle.js" async/>
                 </body>
             </html>
         )
