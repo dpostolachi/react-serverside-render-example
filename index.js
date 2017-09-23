@@ -1,11 +1,14 @@
-require("babel-core/register")
+require("babel-register")({
+    cache: false
+})
+require("babel-polyfill")
 
 const Koa = require('koa')
 const app = new Koa()
 
 
 //Initializing static serving
-require('./core/static')(app)
+require('./core/static.js')(app)
 
 //Initializing app routes
 require('./routes/react-router')(app)

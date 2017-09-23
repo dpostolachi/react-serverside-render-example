@@ -4,9 +4,9 @@ import { Route, Switch } from 'react-router'
 
 import { Provider } from 'react-redux';
 
-import AppRoutes from './routes'
+import AppRoutes from 'routes/routes'
 
-import AppLayout from '../components/layout/layout.jsx'
+import AppLayout from 'components/layout/layout.jsx'
 
 const Routes = (props) =>{
 

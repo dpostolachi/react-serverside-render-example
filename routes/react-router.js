@@ -4,13 +4,13 @@ import { StaticRouter } from 'react-router'
 
 import { renderToString } from 'react-dom/server'
 
-import routes from './routes'
+import routes from 'routes/routes'
 
-import AppRouter from './app-router'
+import AppRouter from 'routes/app-router'
 
 const router = require('koa-router')()
 
-import getStore from '../store/get'
+import getStore from 'store/get'
 
 module.exports = (app)=>{
 

@@ -9,7 +9,6 @@ export default class Home extends Component {
         return (
             <div className="home-page">
                 <h1>This is another page rendered with react.</h1>
-                <Link to="/">Home</Link>
             </div>
         )
 

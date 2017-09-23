@@ -20414,6 +20414,10 @@ module.exports = function(regExp, replace){
 "use strict";
 
 
+__webpack_require__(580);
+
+__webpack_require__(585);
+
 var _react = __webpack_require__(9);
 
 var _react2 = _interopRequireDefault(_react);
@@ -20441,8 +20445,6 @@ var _appRouter = __webpack_require__(556);
 var _appRouter2 = _interopRequireDefault(_appRouter);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-__webpack_require__(580);
 
 var preloadedState = window.__PRELOADED_STATE__;
 
@@ -36273,15 +36275,15 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _home = __webpack_require__(585);
+var _home = __webpack_require__(567);
 
 var _home2 = _interopRequireDefault(_home);
 
-var _other = __webpack_require__(586);
+var _other = __webpack_require__(570);
 
 var _other2 = _interopRequireDefault(_other);
 
-var _ = __webpack_require__(587);
+var _ = __webpack_require__(572);
 
 var _2 = _interopRequireDefault(_);
 
@@ -36292,7 +36294,36 @@ var routes = [_other2.default, _home2.default, _2.default];
 exports.default = routes;
 
 /***/ }),
-/* 567 */,
+/* 567 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+        value: true
+});
+
+var _home = __webpack_require__(568);
+
+var _home2 = _interopRequireDefault(_home);
+
+var _metaActions = __webpack_require__(569);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var route = {
+        path: '/',
+        exact: true,
+        component: _home2.default,
+        loadData: function loadData(ctx, context, Store) {
+                return (0, _metaActions.setTitle)('This title was pushed from reducer')(Store.dispatch); // Promises that must be fulfilled before render starts
+        }
+};
+
+exports.default = route;
+
+/***/ }),
 /* 568 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36340,11 +36371,6 @@ var Home = function (_Component) {
                     'h1',
                     null,
                     'This is page was rendered with react.'
-                ),
-                _react2.default.createElement(
-                    _reactRouterDom.Link,
-                    { to: '/other' },
-                    'Other page'
                 )
             );
         }
@@ -36377,7 +36403,34 @@ function setTitle(title) {
 }
 
 /***/ }),
-/* 570 */,
+/* 570 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+        value: true
+});
+
+var _other = __webpack_require__(571);
+
+var _other2 = _interopRequireDefault(_other);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var route = {
+        path: '/other',
+        exact: false,
+        component: _other2.default,
+        loadData: function loadData(ctx, context, Store) {
+                return;
+        }
+};
+
+exports.default = route;
+
+/***/ }),
 /* 571 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36425,11 +36478,6 @@ var Home = function (_Component) {
                     'h1',
                     null,
                     'This is another page rendered with react.'
-                ),
-                _react2.default.createElement(
-                    _reactRouterDom.Link,
-                    { to: '/' },
-                    'Home'
                 )
             );
         }
@@ -36441,7 +36489,38 @@ var Home = function (_Component) {
 exports.default = Home;
 
 /***/ }),
-/* 572 */,
+/* 572 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+        value: true
+});
+
+var _error = __webpack_require__(223);
+
+var _error2 = _interopRequireDefault(_error);
+
+var _extraActions = __webpack_require__(224);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//this route will work if not any other route has been matched
+
+var route = {
+        path: '*',
+        exact: false,
+        component: _error2.default,
+        loadData: function loadData(ctx, context, Store) {
+                return (0, _extraActions.push404)()(Store.dispatch);
+        }
+};
+
+exports.default = route;
+
+/***/ }),
 /* 573 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36463,6 +36542,10 @@ var _react2 = _interopRequireDefault(_react);
 var _head = __webpack_require__(574);
 
 var _head2 = _interopRequireDefault(_head);
+
+var _header = __webpack_require__(593);
+
+var _header2 = _interopRequireDefault(_header);
 
 var _counter = __webpack_require__(575);
 
@@ -36530,6 +36613,7 @@ var Layout = (_dec = (0, _reactRedux.connect)(function (store) {
                 _react2.default.createElement(
                     'body',
                     null,
+                    _react2.default.createElement(_header2.default, null),
                     _react2.default.createElement(_counter2.default, null),
                     is404 ? _react2.default.createElement(_error2.default, null) : this.props.children,
                     _react2.default.createElement('script', { id: 'preloadedState', type: 'text/javascript', dangerouslySetInnerHTML: { __html: 'window.__PRELOADED_STATE__ = ' + (0, _serializeJavascript2.default)(preloadedState.getState(), { isJSON: true }) } }),
@@ -37449,93 +37533,88 @@ if (typeof Object.create === 'function') {
 /* 583 */,
 /* 584 */,
 /* 585 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-        value: true
-});
-
-var _home = __webpack_require__(568);
-
-var _home2 = _interopRequireDefault(_home);
-
-var _metaActions = __webpack_require__(569);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var route = {
-        path: '/',
-        exact: true,
-        component: _home2.default,
-        loadData: function loadData(ctx, context, Store) {
-                return (0, _metaActions.setTitle)('This title was pushed from reducer')(Store.dispatch); // Promises that must be fulfilled before render starts
-        }
-};
-
-exports.default = route;
+// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 586 */
+/* 586 */,
+/* 587 */,
+/* 588 */,
+/* 589 */,
+/* 590 */,
+/* 591 */,
+/* 592 */,
+/* 593 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-        value: true
+    value: true
 });
+exports.default = undefined;
 
-var _other = __webpack_require__(571);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _other2 = _interopRequireDefault(_other);
+var _react = __webpack_require__(9);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(98);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var route = {
-        path: '/other',
-        exact: false,
-        component: _other2.default,
-        loadData: function loadData(ctx, context, Store) {
-                return;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Header = function (_Component) {
+    _inherits(Header, _Component);
+
+    function Header() {
+        _classCallCheck(this, Header);
+
+        return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+    }
+
+    _createClass(Header, [{
+        key: 'render',
+        value: function render() {
+
+            return _react2.default.createElement(
+                'header',
+                null,
+                _react2.default.createElement(
+                    'span',
+                    { id: 'nav-aria', style: { display: 'none' } },
+                    'Main menu'
+                ),
+                _react2.default.createElement(
+                    'nav',
+                    { role: 'navigation', 'aria-labelledby': 'nav-aria' },
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { to: '/', 'aria-label': 'Home page' },
+                        'Home'
+                    ),
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { to: '/other', 'aria-label': 'Other page' },
+                        'Other'
+                    )
+                )
+            );
         }
-};
+    }]);
 
-exports.default = route;
+    return Header;
+}(_react.Component);
 
-/***/ }),
-/* 587 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-        value: true
-});
-
-var _error = __webpack_require__(223);
-
-var _error2 = _interopRequireDefault(_error);
-
-var _extraActions = __webpack_require__(224);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//this route will work if not any other route has been matched
-
-var route = {
-        path: '*',
-        exact: false,
-        component: _error2.default,
-        loadData: function loadData(ctx, context, Store) {
-                return (0, _extraActions.push404)()(Store.dispatch);
-        }
-};
-
-exports.default = route;
+exports.default = Header;
 
 /***/ })
 /******/ ]);

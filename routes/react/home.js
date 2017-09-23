@@ -1,6 +1,6 @@
-import Home from '../../components/pages/home.jsx';
+import Home from 'components/pages/home.jsx';
 
-import { setTitle } from '../../actions/metaActions'
+import { setTitle } from 'actions/metaActions'
 
 const route = {
         path: '/',

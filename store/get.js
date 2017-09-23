@@ -1,12 +1,12 @@
 import { applyMiddleware, createStore } from 'redux'
 
-import reducer from '../reducers/combine'
+import reducer from 'reducers/combine'
 
 import ReduxThunk from 'redux-thunk'
 
 import Promise from 'redux-promise-middleware'
 
-import initialState from './default'
+import initialState from 'store/default'
 
 const middleware = applyMiddleware(Promise(), ReduxThunk)
 

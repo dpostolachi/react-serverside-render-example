@@ -1,4 +1,6 @@
-require('../styles/main.styl')
+import 'client/styles/main.styl'
+
+import 'font-awesome/css/font-awesome.css'
 
 import React from 'react';
 
@@ -10,7 +12,7 @@ import { applyMiddleware, createStore } from 'redux'
 
 import Promise from 'redux-promise-middleware'
 
-import reducer from '../../reducers/combine.js'
+import reducer from 'reducers/combine.js'
 
 import { BrowserRouter } from 'react-router-dom'
 
@@ -22,7 +24,7 @@ const middleware = applyMiddleware(Promise(), ReduxThunk)
 
 const Store = createStore(reducer, preloadedState, middleware)
 
-import AppRouter from '../../routes/app-router.js';
+import AppRouter from 'routes/app-router.js';
 
 
 render(<BrowserRouter><AppRouter Store={ Store } /></BrowserRouter>, document);

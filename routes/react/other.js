@@ -1,4 +1,4 @@
-import Other from '../../components/pages/other.jsx';
+import Other from 'components/pages/other.jsx';
 
 const route = {
         path: '/other',

@@ -1,8 +1,8 @@
 //this route will work if not any other route has been matched
 
-import Error404 from '../../components/pages/error.jsx'
+import Error404 from 'components/pages/error.jsx'
 
-import { push404 } from '../../actions/extraActions'
+import { push404 } from 'actions/extraActions'
 
 const route = {
         path: '*',

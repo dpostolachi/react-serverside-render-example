@@ -1,18 +1,20 @@
 import React, { Component } from 'react'
 
-import Head from '../controls/head.jsx'
+import Head from 'components/controls/head.jsx'
 
-import Counter from '../controls/counter.jsx'
+import Header from 'components/controls/header.jsx'
+
+import Counter from 'components/controls/counter.jsx'
 
 import serialize from 'serialize-javascript'
 
-import Error404 from '../pages/error.jsx'
+import Error404 from 'components/pages/error.jsx'
 
 import { connect } from 'react-redux'
 
 import { withRouter } from 'react-router'
 
-import { clear404 } from '../../actions/extraActions'
+import { clear404 } from 'actions/extraActions'
 
 @connect((store)=> {
     return {
@@ -42,6 +44,7 @@ class Layout extends Component {
             <html lang="en">
                 <Head/>
                 <body>
+                    <Header />
                     <Counter/>
                     { (is404) ? <Error404/> : this.props.children }
                     <script id="preloadedState" type="text/javascript" dangerouslySetInnerHTML ={ { __html: 'window.__PRELOADED_STATE__ = ' + serialize(preloadedState.getState() ,{isJSON: true}) } } />
