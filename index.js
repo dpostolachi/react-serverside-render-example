@@ -13,6 +13,6 @@ require('./core/static.js')(app)
 //Initializing app routes
 require('./routes/react-router')(app)
 
-app.listen(3000)
+app.listen(6001)
 
 console.log("App running on port 3000")
